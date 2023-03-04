@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import Button from '../Button';
 
 const Card = () => {
 
 const {valor, setValor} = useState(0)
+  
   function Adicionar (){
     setValor(valor + 1)
   }
@@ -16,21 +18,18 @@ const {valor, setValor} = useState(0)
     Meu primeiro card
   </div>
   <div className="card-body">
-    <button 
-      type="button" 
+    <Button
       className="btn btn-success" 
       onClick={Adicionar}
       >
       Adicionar
-      </button>
-  
-    <button type="button" 
-      className="btn btn-danger"
+    </Button>
+     <Button
+       className="btn btn-danger"
       onClick={Remover}
       >
-      
       Remover
-    </button>
+    </Button>    
     <p>{valor}</p>
   </div>
 </div>
